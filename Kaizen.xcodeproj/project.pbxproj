@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7A68538D3048178F004F0151 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A68538C30481788004F0151 /* .gitignore */; };
+		7A68539230482417004F0151 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7A68539130482417004F0151 /* FirebaseAuth */; };
+		7A68539430482417004F0151 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7A68539330482417004F0151 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		7A685347303CD592004F0151 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +33,7 @@
 		7A685339303CD58F004F0151 /* Kaizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A685346303CD592004F0151 /* KaizenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaizenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A685350303CD592004F0151 /* KaizenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaizenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A68538C30481788004F0151 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A68539230482417004F0151 /* FirebaseAuth in Frameworks */,
+				7A68539430482417004F0151 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +84,7 @@
 		7A685330303CD58F004F0151 = {
 			isa = PBXGroup;
 			children = (
+				7A68538C30481788004F0151 /* .gitignore */,
 				7A68533B303CD58F004F0151 /* Kaizen */,
 				7A685349303CD592004F0151 /* KaizenTests */,
 				7A685353303CD592004F0151 /* KaizenUITests */,
@@ -112,6 +122,8 @@
 			);
 			name = Kaizen;
 			packageProductDependencies = (
+				7A68539130482417004F0151 /* FirebaseAuth */,
+				7A68539330482417004F0151 /* FirebaseFirestore */,
 			);
 			productName = Kaizen;
 			productReference = 7A685339303CD58F004F0151 /* Kaizen.app */;
@@ -195,6 +207,9 @@
 			);
 			mainGroup = 7A685330303CD58F004F0151;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7A68539030482417004F0151 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7A68533A303CD58F004F0151 /* Products */;
 			projectDirPath = "";
@@ -212,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A68538D3048178F004F0151 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +574,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A68539030482417004F0151 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A68539130482417004F0151 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A68539030482417004F0151 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		7A68539330482417004F0151 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A68539030482417004F0151 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7A685331303CD58F004F0151 /* Project object */;
 }

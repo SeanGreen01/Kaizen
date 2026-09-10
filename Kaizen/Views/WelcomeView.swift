@@ -15,29 +15,28 @@ struct WelcomeView: View {
     var body: some View {
         ZStack {
             // MARK: Background
-            
-            ZStack{
-                
-            }
-            
-            // MARK: Content
-            VStack (alignment: .center, spacing: 32) {
-                // App Name
-                Text("Kaizen")
+            NavigationStack {
+                ZStack{
                     
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-            
-                // Slogan
-                Text("The future of productivity is here.")
-                    .font(.title2)
-                    .fontWeight(.heavy)
+                }
                 
-                // Get Started Button
-                Button(
-                    action: {
-                        
-                    },
+                // MARK: Content
+                VStack (alignment: .center, spacing: 32) {
+                    // App Name
+                    Text("Kaizen")
+                    
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                    
+                    // Slogan
+                    Text("The future of productivity is here.")
+                        .font(.title2)
+                        .fontWeight(.heavy)
+                    
+                    // Get Started Button
+                    NavigationLink {
+                        LoginView()
+                    }
                     label:  {
                         Text("Get Started")
                             .font(.headline)
@@ -45,14 +44,16 @@ struct WelcomeView: View {
                             .padding()
                             .foregroundStyle(.white)
                             .background(.gray)
-                            
+                        
+                        
+                        
                     }
-                    )
-                    }
+                }
+            }
         }
     }
 }
+    #Preview {
+        WelcomeView()
+    }
 
-#Preview {
-    WelcomeView()
-}

@@ -91,4 +91,22 @@ final class AuthViewModel: ObservableObject {
             errorMessage = error.localizedDescription
         }
     }
+
+    func deleteAccount(password: String) async -> Bool {
+        guard !password.isEmpty else {
+            errorMessage = "Enter your password to delete your account."
+            return false
+        }
+        isLoading = true
+        errorMessage = nil
+        defer { isLoading = false }
+        do {
+            try await authService.deleteCurrentUser(password: password)
+            currentUser = nil
+            return true
+        } catch {
+            errorMessage = error.localizedDescription
+            return false
+        }
+    }
 }
